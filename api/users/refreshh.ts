@@ -3,7 +3,7 @@ import { nAuth } from "../../utils/auth/authdb";
 import { autoLogin } from "../../utils/auth/functions/autoLogin";
 import { allowCors } from "../../utils/cors/cors";
 
-const login = async (req: VercelRequest, res: VercelResponse) => {
+const loginn = async (req: VercelRequest, res: VercelResponse) => {
     const profile: any = await autoLogin(req);
     if (
         profile.data.name === req.body.name &&
@@ -12,4 +12,4 @@ const login = async (req: VercelRequest, res: VercelResponse) => {
         res.status(201).json(profile.data);
 };
 
-module.exports = allowCors(login);
+module.exports = allowCors(loginn);

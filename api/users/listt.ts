@@ -3,7 +3,7 @@ import { allowCors } from "../../utils/cors/cors";
 import { db } from "../../utils/db";
 
 // LIST OF ALL USERS
-const users = async (req: VercelRequest, res: VercelResponse) => {
+const userss = async (req: VercelRequest, res: VercelResponse) => {
     //TODO check for the empty string it might bring back the ceo db
     // TODO in production you should definetly check the team to see if it really exists on user profile
     // TODO clean up
@@ -22,4 +22,4 @@ const users = async (req: VercelRequest, res: VercelResponse) => {
 
     // res.redirect("/api/test");
 };
-module.exports = allowCors(users);
+module.exports = allowCors(userss);

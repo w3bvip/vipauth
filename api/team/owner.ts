@@ -8,7 +8,7 @@ import { User } from "../../utils/models/User";
 import { UserClass } from "../../utils/helpers/userClass";
 import { CompanyDb } from "../../utils/company/companydb";
 
-const newcompany = async (req: VercelRequest, res: VercelResponse) => {
+const newcompanyy = async (req: VercelRequest, res: VercelResponse) => {
     // login
     const profile: any = await autoLogin(req);
     const maindb = db();
@@ -23,4 +23,4 @@ const newcompany = async (req: VercelRequest, res: VercelResponse) => {
     res.status(201).json(teamsinfo);
 };
 
-module.exports = allowCors(newcompany);
+module.exports = allowCors(newcompanyy);

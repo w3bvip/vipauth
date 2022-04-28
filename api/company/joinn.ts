@@ -4,7 +4,7 @@ import { autoLogin } from "../../utils/auth/functions/autoLogin";
 import { CompanyDb } from "../../utils/company/companydb";
 import { allowCors } from "../../utils/cors/cors";
 
-const join = async (req: VercelRequest, res: VercelResponse) => {
+const joinn = async (req: VercelRequest, res: VercelResponse) => {
     // login
     const profile: any = await autoLogin(req);
     const secret = req.body.secret;
@@ -18,4 +18,4 @@ const join = async (req: VercelRequest, res: VercelResponse) => {
     res.json(joinCompany.data);
 };
 
-module.exports = allowCors(join);
+module.exports = allowCors(joinn);

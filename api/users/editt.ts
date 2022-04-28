@@ -3,7 +3,7 @@ import { autoLogin } from "../../utils/auth/functions/autoLogin";
 import { allowCors } from "../../utils/cors/cors";
 
 import { db } from "../../utils/db";
-const addProfile = async (req: VercelRequest, res: VercelResponse) => {
+const addProfilee = async (req: VercelRequest, res: VercelResponse) => {
     const profile: any = await autoLogin(req);
     // TODO check The profile for the requested team members
     if (req.body.users && profile.data.key && req.body.SelectedTeam) {
@@ -18,4 +18,4 @@ const addProfile = async (req: VercelRequest, res: VercelResponse) => {
     }
 };
 
-module.exports = allowCors(addProfile);
+module.exports = allowCors(addProfilee);
